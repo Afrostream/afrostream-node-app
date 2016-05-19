@@ -6,8 +6,8 @@ var ejs = require('ejs');
 var middlewareBodyParser = require('body-parser');
 var middlewareBasicAuth = require('basic-auth-connect');
 var middlewareCacheHandler = require('afrostream-node-middleware-cachehandler');
-var middlewareAllowPreflight = require('afrostream-node-middleware-preflight');
-var middlewareAllowCrossdomain = require('afrostream-node-middleware-crossdomain');
+var middlewareAllowPreflight = require('afrostream-node-middleware-allowpreflight');
+var middlewareAllowCrossdomain = require('afrostream-node-middleware-allowcrossdomain');
 var middlewareError = require('./middleware/error.js');
 
 var alive = require('./controller.alive.js');
