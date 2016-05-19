@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "afrostream-node-middleware-allowcrossdomain": "git+ssh://git@github.com/Afrostream/afrostream-node-middleware-allowcrossdomain.git#v1.0.0",
+    "afrostream-node-middleware-allowpreflight": "git+ssh://git@github.com/Afrostream/afrostream-node-middleware-allowpreflight.git#v1.0.0",
     "afrostream-node-middleware-cachehandler": "git+ssh://git@github.com/Afrostream/afrostream-node-middleware-cachehandler.git#v1.0.0",
     "basic-auth-connect": "^1.0.0",
     "body-parser": "^1.15.1"
