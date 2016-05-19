@@ -1,0 +1,19 @@
+{
+  "name": "afrostream-node-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "express": "4.13.x"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "afrostream-node-middleware-cachehandler": "git+ssh://git@github.com/Afrostream/afrostream-node-middleware-cachehandler.git#v1.0.0",
+    "basic-auth-connect": "^1.0.0",
+    "body-parser": "^1.15.1"
+  }
+}
