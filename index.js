@@ -30,9 +30,9 @@ module.exports.create = function (options) {
     app.use(middlewareBasicAuth(options.basicAuth.user, options.basicAuth.password));
   }
   //
-  app.use(require('body-parser').text({type: 'text/xml'}));
-  app.use(require('body-parser').urlencoded({extended: false, limit:'500kb'}));
-  app.use(require('body-parser').json({limit:'500kb'}));
+  app.use(middlewareBodyParser.text({type: 'text/xml'}));
+  app.use(middlewareBodyParser.urlencoded({extended: false, limit:'500kb'}));
+  app.use(middlewareBodyParser.json({limit:'500kb'}));
   //
   app.use(middlewareCacheHandler());
   app.use(middlewareAllowCrossdomain());
