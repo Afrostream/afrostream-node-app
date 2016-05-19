@@ -8,7 +8,6 @@ var middlewareBasicAuth = require('basic-auth-connect');
 var middlewareCacheHandler = require('afrostream-node-middleware-cachehandler');
 var middlewareAllowPreflight = require('afrostream-node-middleware-allowpreflight');
 var middlewareAllowCrossdomain = require('afrostream-node-middleware-allowcrossdomain');
-var middlewareError = require('./middleware/error.js');
 
 var alive = require('./controller.alive.js');
 
@@ -37,7 +36,6 @@ module.exports.create = function (options) {
   app.use(middlewareCacheHandler());
   app.use(middlewareAllowCrossdomain());
   app.use(middlewareAllowPreflight());
-  app.use(middlewareError);
   //
   return app;
 };
