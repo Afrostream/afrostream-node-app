@@ -23,19 +23,24 @@ module.exports.create = function (options) {
     app.set('views', options.views);
     app.engine('html', ejs.renderFile);
   }
-  // alive is the only route unprotected by basicAuth
-  app.get('/alive', alive);
-  if (options.basicAuth) {
-    app.use(middlewareBasicAuth(options.basicAuth.user, options.basicAuth.password));
-  }
-  //
-  app.use(middlewareBodyParser.text({type: 'text/xml'}));
-  app.use(middlewareBodyParser.urlencoded({extended: false, limit:'500kb'}));
-  app.use(middlewareBodyParser.json({limit:'500kb'}));
-  //
+
+  // middlewares for cache & cross domain
   app.use(middlewareCacheHandler());
   app.use(middlewareAllowCrossdomain());
   app.use(middlewareAllowPreflight());
-  //
+
+  // alive is the only route unprotected by basicAuth
+  app.get('/alive', alive);
+
+  // authentication
+  if (options.basicAuth) {
+    app.use(middlewareBasicAuth(options.basicAuth.user, options.basicAuth.password));
+  }
+
+  // body parsing
+  app.use(middlewareBodyParser.text({type: 'text/xml'}));
+  app.use(middlewareBodyParser.urlencoded({extended: false, limit:'500kb'}));
+  app.use(middlewareBodyParser.json({limit:'500kb'}));
+
   return app;
 };
