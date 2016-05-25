@@ -1,10 +1,15 @@
 'use strict';
 
+// 3rd party lib
 var express = require('express');
 var ejs = require('ejs');
 
-var morgan = require('afrostream-node-middleware-morgan');
+// 3rd party middleware
+var middlewareMethodOverride = require('method-override');
+var middlewareCompression = require('compression');
 
+// afrostream middlewares
+var middlewareMorgan = require('afrostream-node-middleware-morgan');
 var middlewareBodyParser = require('body-parser');
 var middlewareBasicAuth = require('basic-auth-connect');
 var middlewareCacheHandler = require('afrostream-node-middleware-cachehandler');
@@ -26,13 +31,15 @@ module.exports.create = function (options) {
     app.engine('html', ejs.renderFile);
   }
 
+  //
+  app.use(middlewareCompression());
+  app.use(middlewareMorgan('afro'));
+  app.use(middlewareMethodOverride());
+
   // middlewares for cache & cross domain
   app.use(middlewareCacheHandler());
   app.use(middlewareAllowCrossdomain());
   app.use(middlewareAllowPreflight());
-
-  // logs
-  app.use(morgan('afro'));
 
   // alive is the only route unprotected by basicAuth
   app.get('/alive', alive);

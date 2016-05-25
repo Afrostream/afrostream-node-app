@@ -18,6 +18,8 @@
     "afrostream-node-middleware-morgan": "git+https://afrostream-tech:d51e355769ddd0fd212084c35fb99f71ab4146b2@github.com/Afrostream/afrostream-node-middleware-morgan.git#v1.0.0",
     "basic-auth-connect": "^1.0.0",
     "body-parser": "^1.15.1",
-    "ejs": "^2.4.1"
+    "compression": "^1.6.2",
+    "ejs": "^2.4.1",
+    "method-override": "^2.3.6"
   }
 }
