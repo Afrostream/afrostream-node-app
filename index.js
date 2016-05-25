@@ -3,6 +3,8 @@
 var express = require('express');
 var ejs = require('ejs');
 
+var morgan = require('afrostream-node-middleware-morgan');
+
 var middlewareBodyParser = require('body-parser');
 var middlewareBasicAuth = require('basic-auth-connect');
 var middlewareCacheHandler = require('afrostream-node-middleware-cachehandler');
@@ -28,6 +30,9 @@ module.exports.create = function (options) {
   app.use(middlewareCacheHandler());
   app.use(middlewareAllowCrossdomain());
   app.use(middlewareAllowPreflight());
+
+  // logs
+  app.use(morgan('afro'));
 
   // alive is the only route unprotected by basicAuth
   app.get('/alive', alive);
