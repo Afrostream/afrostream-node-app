@@ -1,6 +1,6 @@
 {
   "name": "afrostream-node-app",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,11 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "afrostream-node-middleware-allowcrossdomain": "git+https://afrostream-tech:d51e355769ddd0fd212084c35fb99f71ab4146b2@github.com/Afrostream/afrostream-node-middleware-allowcrossdomain.git#v1.0.0",
-    "afrostream-node-middleware-allowpreflight": "git+https://afrostream-tech:d51e355769ddd0fd212084c35fb99f71ab4146b2@github.com/Afrostream/afrostream-node-middleware-allowpreflight.git#v1.0.0",
-    "afrostream-node-middleware-cachehandler": "git+https://afrostream-tech:d51e355769ddd0fd212084c35fb99f71ab4146b2@github.com/Afrostream/afrostream-node-middleware-cachehandler.git#v1.0.1",
-    "afrostream-node-middleware-morgan": "git+https://afrostream-tech:d51e355769ddd0fd212084c35fb99f71ab4146b2@github.com/Afrostream/afrostream-node-middleware-morgan.git#v1.0.0",
-    "afrostream-node-middleware-userip": "git+https://afrostream-tech:d51e355769ddd0fd212084c35fb99f71ab4146b2@github.com/Afrostream/afrostream-node-middleware-userip.git#v1.0.0",
+    "afrostream-node-middleware-allowcrossdomain": "git+https://afrostream-tech:39378b0626f1b2d4c733eeb5c5be73908b3c8c53@github.com/Afrostream/afrostream-node-middleware-allowcrossdomain.git#v1.0.0",
+    "afrostream-node-middleware-allowpreflight": "git+https://afrostream-tech:39378b0626f1b2d4c733eeb5c5be73908b3c8c53@github.com/Afrostream/afrostream-node-middleware-allowpreflight.git#v1.0.0",
+    "afrostream-node-middleware-cachehandler": "git+https://afrostream-tech:39378b0626f1b2d4c733eeb5c5be73908b3c8c53@github.com/Afrostream/afrostream-node-middleware-cachehandler.git#v1.0.1",
+    "afrostream-node-middleware-morgan": "git+https://afrostream-tech:39378b0626f1b2d4c733eeb5c5be73908b3c8c53@github.com/Afrostream/afrostream-node-middleware-morgan.git#v1.0.0",
+    "afrostream-node-middleware-userip": "git+https://afrostream-tech:39378b0626f1b2d4c733eeb5c5be73908b3c8c53@github.com/Afrostream/afrostream-node-middleware-userip.git#v1.0.0",
     "basic-auth-connect": "^1.0.0",
     "body-parser": "^1.15.1",
     "compression": "^1.6.2",
