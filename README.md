@@ -3,13 +3,13 @@
 express pre-configured app    
 
 Features :  
-* middleware preflight
-* middleware cross domain
+* middleware preflight (unless disableCORS is set)
+* middleware cross domain (unless disableCORS is set)
 * middleware body parser for content type json, xml, form url encoded, up to 500kb POST requests
 * /alive
 * ejs views, using .html extension
 * no etag
-* no express custom headers 
+* no express custom headers
 
 # Usage
 

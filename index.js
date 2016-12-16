@@ -40,8 +40,10 @@ module.exports.create = function (options) {
 
   // middlewares for cache & cross domain
   app.use(middlewareCacheHandler());
-  app.use(middlewareAllowCrossdomain());
-  app.use(middlewareAllowPreflight());
+  if (options.disableCORS !== true) {
+    app.use(middlewareAllowCrossdomain());
+    app.use(middlewareAllowPreflight());
+  }
 
   // alive is the only route unprotected by basicAuth
   app.get('/alive', alive);
